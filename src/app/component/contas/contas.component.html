@@ -1,0 +1,52 @@
+<div class="button">
+  <button mat-raised-button color="primary" routerLink="/criar-conta">
+    <span class="material-icons"> add </span>
+    Criar nova conta
+  </button>
+</div>
+
+<div class="mat-elevation-z5">
+  <table mat-table aria-label="Elements" [dataSource]="contas">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Número da conta</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cpf">
+      <th mat-header-cell *matHeaderCellDef>Cpf</th>
+      <td mat-cell *matCellDef="let row">{{row.cpf}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="saldo">
+      <th mat-header-cell *matHeaderCellDef>Saldo</th>
+      <td mat-cell *matCellDef="let row">{{row.saldo | currency: 'BRL'}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
+      <td mat-cell *matCellDef="let row">
+        <a routerLink="/products/update/{{row.id}}">
+          <i class="material-icons edit">
+            edit
+          </i>
+        </a>
+        <a routerLink="/products/delete/{{row.id}}">
+          <i class="material-icons delete">
+            delete
+          </i>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>
