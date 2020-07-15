@@ -1,0 +1,27 @@
+<mat-card >
+  <mat-card-title>Operação de Transferência entre contas</mat-card-title>
+  <form>
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="transferenciaModel.contaDoSolicitante"
+               placeholder="Número da conta do solicitante" name="contaDoSolicitante">
+      </label>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="transferenciaModel.valor" placeholder="Valor" name="valor">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="transferenciaModel.contaDoBeneficiario"
+             placeholder="Número da conta do beneficiario" name="contaDoBeneficiario">
+    </mat-form-field>
+
+  </form>
+  <button mat-raised-button color="primary"  (click)="transferir()">
+    Transferir
+  </button>
+  <button mat-raised-button color="warn" (click)="cancelar()">
+    Cancelar
+  </button>
+</mat-card>

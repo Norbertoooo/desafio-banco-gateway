@@ -17,12 +17,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ContasComponent } from './component/contas/contas.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
-import { CreateComponent } from './component/contas/create/create.component';
+import { CriarContaComponent } from './component/contas/criar-conta/criar-conta.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { SacarComponent } from './component/contas/sacar/sacar.component';
 import { DepositarComponent } from './component/contas/depositar/depositar.component';
+import { TransferirComponent } from './component/contas/transferir/transferir.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,10 @@ import { DepositarComponent } from './component/contas/depositar/depositar.compo
     NavComponent,
     HomeComponent,
     ContasComponent,
-    CreateComponent,
+    CriarContaComponent,
     SacarComponent,
     DepositarComponent,
+    TransferirComponent,
   ],
   imports: [
     BrowserModule,

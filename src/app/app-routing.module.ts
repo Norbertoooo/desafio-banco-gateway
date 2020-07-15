@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './component/home/home.component';
 import {ContasComponent} from './component/contas/contas.component';
-import {CreateComponent} from './component/contas/create/create.component';
+import {CriarContaComponent} from './component/contas/criar-conta/criar-conta.component';
 import {SacarComponent} from './component/contas/sacar/sacar.component';
 import {DepositarComponent} from './component/contas/depositar/depositar.component';
+import {TransferirComponent} from './component/contas/transferir/transferir.component';
 
 
 const routes: Routes = [
@@ -18,16 +19,19 @@ const routes: Routes = [
   },
   {
     path: 'criar-conta',
-    component: CreateComponent
+    component: CriarContaComponent
   },
   {
     path: 'sacar',
     component: SacarComponent
-  }
-  ,
+  },
   {
     path: 'depositar',
     component: DepositarComponent
+  },
+  {
+    path: 'transferir',
+    component: TransferirComponent
   }
 ];
 

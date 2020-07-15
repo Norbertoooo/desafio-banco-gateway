@@ -5,10 +5,10 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  templateUrl: './criar-conta.component.html',
+  styleUrls: ['./criar-conta.component.css']
 })
-export class CreateComponent implements OnInit {
+export class CriarContaComponent implements OnInit {
 
   conta: ContaModel = new ContaModel();
   constructor(private contaService: ContaService, private router: Router) { }

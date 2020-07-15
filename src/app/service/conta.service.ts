@@ -4,6 +4,7 @@ import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {ContaModel} from '../model/conta.model';
+import {TransferenciaModel} from '../model/transferencia.model';
 
 @Injectable({
   providedIn: 'root'
@@ -34,8 +35,8 @@ export class ContaService {
     const url = `${environment.url}/depositos/${contaDeDestino}/${valor}`;
     return this.http.put<ContaModel>(url, null);
   }
-  operacaoDeDepositoEntreContas(contaDeDestino: number, valor: number): Observable<ContaModel> {
-    const url = `${environment.url}/depositos`;
-    return this.http.put<ContaModel>(url, null);
+  operacaoDeTranferenciaEntreContas(transferenciaModel: TransferenciaModel): Observable<ContaModel> {
+    const url = `${environment.url}/transferencias`;
+    return this.http.put<ContaModel>(url, transferenciaModel);
   }
 }
