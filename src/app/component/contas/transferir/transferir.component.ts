@@ -16,7 +16,7 @@ export class TransferirComponent implements OnInit {
   ngOnInit(): void {
   }
   transferir() {
-    this.contaService.operacaoDeTranferenciaEntreContas(this.transferenciaModel)
+    this.contaService.operacaoDeTranferencia(this.transferenciaModel)
       .subscribe( () => {
         this.contaService.showMessage('Transferência realizada com sucesso!');
         this.router.navigate(['/contas']);
