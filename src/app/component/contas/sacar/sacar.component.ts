@@ -19,7 +19,7 @@ export class SacarComponent implements OnInit {
   sacar() {
     this.contaService.operacaoDeSaque(this.contaDestino, this.valor)
       .subscribe( () => {
-        this.contaService.showMessage('Operacao de saque realizada com sucesso');
+        this.contaService.showMessage('Saque realizado com sucesso!');
         this.router.navigate(['/contas']);
         }
       );

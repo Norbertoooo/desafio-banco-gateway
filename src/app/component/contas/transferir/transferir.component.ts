@@ -18,7 +18,7 @@ export class TransferirComponent implements OnInit {
   transferir() {
     this.contaService.operacaoDeTranferenciaEntreContas(this.transferenciaModel)
       .subscribe( () => {
-        this.contaService.showMessage('operação de tranferencia realizada com sucesso');
+        this.contaService.showMessage('Transferência realizada com sucesso!');
         this.router.navigate(['/contas']);
       });
   }

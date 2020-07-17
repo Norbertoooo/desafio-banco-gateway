@@ -24,7 +24,7 @@ export class DepositarComponent implements OnInit {
   depositar() {
     this.contaService.operacaoDeDeposito(this.contaDestino, this.valor)
       .subscribe(() => {
-        this.contaService.showMessage('Operação de deposito realizada com sucesso');
+        this.contaService.showMessage('Depósito realizado com sucesso!');
         this.router.navigate(['/contas']);
       });
   }

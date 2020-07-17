@@ -1,0 +1,36 @@
+<mat-card >
+  <mat-card-title>Criar Nova Conta</mat-card-title>
+  <form>
+    <mat-form-field>
+      <label>
+        <input matInput
+               [value]="conta.nome"
+               disabled
+               placeholder="Nome"
+               name="nome">
+      </label>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             [(ngModel)]="conta.saldo"
+             disabled
+             placeholder="Saldo"
+             name="saldo">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             disabled
+             [(ngModel)]="conta.cpf"
+             placeholder="Cpf"
+             name="cpf">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="excluir()">
+    Excluir
+  </button>
+  <button mat-raised-button color="warn" (click)="cancelar()">
+    Cancelar
+  </button>
+</mat-card>

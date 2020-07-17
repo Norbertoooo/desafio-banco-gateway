@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import { SacarComponent } from './component/contas/sacar/sacar.component';
 import { DepositarComponent } from './component/contas/depositar/depositar.component';
 import { TransferirComponent } from './component/contas/transferir/transferir.component';
+import { ExcluirComponent } from './component/contas/excluir/excluir.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { TransferirComponent } from './component/contas/transferir/transferir.co
     SacarComponent,
     DepositarComponent,
     TransferirComponent,
+    ExcluirComponent,
   ],
   imports: [
     BrowserModule,

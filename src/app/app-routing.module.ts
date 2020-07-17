@@ -6,6 +6,7 @@ import {CriarContaComponent} from './component/contas/criar-conta/criar-conta.co
 import {SacarComponent} from './component/contas/sacar/sacar.component';
 import {DepositarComponent} from './component/contas/depositar/depositar.component';
 import {TransferirComponent} from './component/contas/transferir/transferir.component';
+import {ExcluirComponent} from './component/contas/excluir/excluir.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'transferir',
     component: TransferirComponent
+  },
+  {
+    path: 'excluir/:id',
+    component: ExcluirComponent
   }
 ];
 

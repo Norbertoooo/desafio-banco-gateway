@@ -14,7 +14,7 @@ export class ContaService {
   constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
   showMessage(msg: string, isError: boolean = false): void {
-    this.snackBar.open(msg, 'X', {
+    this.snackBar.open(msg, '', {
       duration: 3000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
@@ -24,8 +24,14 @@ export class ContaService {
   listarContas(): Observable<ContaModel[]> {
     return this.http.get<ContaModel[]>(`${environment.url}`);
   }
-  criarConta(conta: ContaModel): Observable<ContaModel> {
-    return this.http.post<ContaModel>(`${environment.url}`, conta);
+  criarConta(conta: ContaModel): Observable<any> {
+    return this.http.post<any>(`${environment.url}`, conta);
+  }
+  buscarContaPorId(id: any): Observable<any>{
+    return this.http.get(`${environment.url}/${id}`);
+  }
+  excluirConta(id: number): Observable<any> {
+    return this.http.delete<any>(`${environment.url}/${id}`);
   }
   operacaoDeSaque(contaDeDestino: number, valor: number): Observable<ContaModel> {
     const url = `${environment.url}/saques/${contaDeDestino}/${valor}`;

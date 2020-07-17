@@ -17,10 +17,9 @@ export class CriarContaComponent implements OnInit {
   }
 
   salvarConta() {
-    console.log(this.conta);
     return this.contaService.criarConta(this.conta)
       .subscribe(() => {
-        this.contaService.showMessage('Conta criada com sucesso');
+        this.contaService.showMessage('Conta cadastrada com sucesso!');
         this.router.navigate(['/contas']);
       }
     );
