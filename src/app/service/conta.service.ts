@@ -68,7 +68,7 @@ export class ContaService {
     );
   }
   errorHandler(error: HttpErrorResponse): Observable<any> {
-    this.showMessage(`${error.error.titulo}`, true);
+    this.showMessage(`${error.error.erro.titulo}`, true);
     return EMPTY;
   }
 }
