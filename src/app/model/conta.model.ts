@@ -3,4 +3,5 @@ export class ContaModel {
   nome: string;
   saldo: number;
   cpf: string;
+  numeroConta?: number;
 }

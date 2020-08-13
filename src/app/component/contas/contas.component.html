@@ -8,9 +8,9 @@
 <div class="mat-elevation-z5">
   <table mat-table aria-label="Elements" [dataSource]="contas">
     <!-- Id Column -->
-    <ng-container matColumnDef="id">
+    <ng-container matColumnDef="numeroDaConta">
       <th mat-header-cell *matHeaderCellDef>Número da conta</th>
-      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      <td mat-cell *matCellDef="let row">{{row.numeroConta}}</td>
     </ng-container>
 
     <!-- Name Column -->
@@ -32,7 +32,7 @@
     <ng-container matColumnDef="acoes">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let row">
-        <a routerLink="/excluir/{{row.id}}">
+        <a routerLink="/excluir/{{row.numeroConta}}">
           <i class="material-icons delete">
             delete
           </i>

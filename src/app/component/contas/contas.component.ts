@@ -10,7 +10,7 @@ import {ContaService} from '../../service/conta.service';
 export class ContasComponent implements OnInit {
 
   contas: ContaModel[];
-  displayedColumns = ['id', 'nome', 'cpf', 'saldo', 'acoes'];
+  displayedColumns = ['numeroDaConta', 'nome', 'cpf', 'saldo', 'acoes'];
   constructor(private contaService: ContaService) { }
 
   ngOnInit(): void {
